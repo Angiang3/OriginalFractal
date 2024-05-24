@@ -1,18 +1,24 @@
-public void setup{
-size(800, 800);
-background(0,0,0);
+void setup() {
+  size(800, 800);
+  background(0, 0, 0);
 }
-public void draw{
-drawCircles(width, height, width);
-public void drawCircles(int x, int y, int rad){
-noFill();
-if (rad > 20){
-drawCircles(x, y - rad/2, rad/2);
-drawCircles(× + 2*rad/3, y + rad/3, rad/2); drawCircles(× - 2*rad/3, y + rad/3, rad/2);
-stroke((float)Math.random()*255,
-(float)Math.random()*255, (float)Math.random(*255);
+
+void draw() {
+  background(0); // To clear the previous frame
+  drawCircles(width / 2, height / 2, width);
 }
-ellipse(×/2, y/2, rad, rad);
+
+void drawCircles(int x, int y, int rad) {
+  noFill();
+  if (rad > 20) {
+    drawCircles(x, y - rad / 2, rad / 2);
+    drawCircles(x + 2 * rad / 3, y + rad / 3, rad / 2);
+    drawCircles(x - 2 * rad / 3, y + rad / 3, rad / 2);
+    stroke((float) Math.random() * 255, (float) Math.random() * 255, (float) Math.random() * 255);
+  }
+  ellipse(x, y, rad, rad);
 }
-public void keyPressed(§ //reverse and forward with pattern using arrows?
+
+void keyPressed() {
+  // Implement reverse and forward with pattern using arrows
 }
